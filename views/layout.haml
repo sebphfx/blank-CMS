@@ -1,0 +1,36 @@
+!!! 5
+%html
+  %head
+    %meta(charset="utf-8")
+    %title= "Blank CMS | #{@title}"
+
+    %meta(name="description" content="Blank-Portfolio CMS in Ruby")
+    %meta(name="author" content="Sebastien Paquet")    
+    %link(rel="shortcut icon" href="/images/favicon.png")       
+    
+    %link(rel="stylesheet" media="screen, projection" href="/css/style.css")
+    
+    /[if lt IE 9]
+      %script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+      
+    
+  %body
+    %header
+      %h1 Blank CMS
+
+    %nav
+      %li
+        %a{:href =>'/'}Home
+      %li
+        %a{:href => '/galleries'}Photo Galleries
+      %li
+        %a{:href =>'/microblog'}Microblog
+      %li
+        %a{:href => '/contact'}Contact Me!
+
+  %div.main.clearfix
+    
+    = yield
+    
+    %footer
+      %small Copyright Jumplink Design #{Time.now.year}. All Rights Reserved.

@@ -1,0 +1,65 @@
+body{
+   margin:0;
+   padding:0;
+   text-align:center;
+}
+
+header{
+   text-align:left;
+}
+
+.main{
+   position:relative;
+   margin:0 auto;
+   width:940px;
+   text-align:left;
+}
+
+
+nav{
+   text-align:left;
+}
+
+form{
+   width:400px;
+}
+.items{
+   float:left;
+   width:150px;
+   margin:20px 0 25px 20px;
+   border:2px solid #000;
+   border-radius:8px;
+   }
+
+.items img{
+   margin:5px;
+}
+
+.items ul{
+   padding-left:20px;
+   list-style-type:square;
+
+}
+
+
+
+.update_items form{
+	width:300px;
+
+     }
+
+ .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+
+
+footer{
+   clear:both;
+   float:left;
+}
+
+

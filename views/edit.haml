@@ -1,0 +1,14 @@
+%div{:class=>"update_items"}     
+  -Item.where(:id=>[params[:id]]).each do |item|
+    %form{:action => "/edit/"+item.id, :method => "post", :enctype=>"multipart/form-data",:class=>"items"}
+      %img{:src=>'/css/img/' + item.image,:width=>'90',:height=>'90'}
+      %fieldset
+        %input{:type=>"text",:name=>"itemtype",:value=>item.itemtype}
+        %input{:type=>"text",:name=>"desc",:value=>item.desc}
+        %input{:type=>"text",:name=>"size",:value=>item.size}
+        %input{:type=>"text",:name=>"price",:value=>item.price.to_s + "$"} 
+        %input{:type => "hidden", :name => "image",:value=>item.image,:class => "text"}
+        %input{:type=>"file",:name=>"file"}
+        %input{:type => "submit", :value => "Submit", :class => "button"}
+
+  

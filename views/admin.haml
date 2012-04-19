@@ -1,0 +1,23 @@
+%h3 Add an item
+%form{ :action => "/admin", :method => "post"  ,:enctype=>"multipart/form-data"}
+  %fieldset
+    %ol
+          %li
+        %label{:for => "caption"} Caption:
+        %input{:type => "text", :name => "caption", :class => "text"}
+      %li
+        %label{:for => "image"} Image:
+        %input{:type => "hidden", :name => "image", :class => "text"}
+          %input{:type=>"file",:name=>"file"}
+
+    %input{:type => "submit", :value => "Submit", :class => "button"}
+
+%div      
+  -Item.all.each do |item|
+    %div{:class=>"items"}
+      %img{:src=>'/css/img/' + item.image,:width=>'140',:height=>'130'}
+      %ul
+        %li= item.caption
+        %a{ :href=>'/edit/'+item.id }Edit
+        %a{ :href=>'/delete/'+item.id }Delete 
+                  
